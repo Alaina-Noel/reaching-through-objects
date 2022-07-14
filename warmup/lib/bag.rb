@@ -17,14 +17,9 @@ class Bag
     @count += 1
   end
 
-end
-
-
-class Candy
-  attr_reader :name
-
-  def initialize(name)
-    @name = name
+  def contains?(searched_for_candy)
+     candy_in_bag == searched_for_candy
+     #not sure how to reference candy_in_bag in a better way
   end
 
 end

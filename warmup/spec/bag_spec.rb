@@ -31,14 +31,13 @@ RSpec.describe Bag do
     expect(bag.empty?).to be false
   end
 
-  it 'can count candies' do
+  xit 'can count candies' do
     bag = Bag.new
     bag.add_candy(Candy.new("Caramelized Almonds"))
 
     expect(bag.count).to eq(1)
   end
 
-#i got stuck here on Thursdya at 11am
   it 'contains candies and candies have a type' do
     bag = Bag.new
     bag.add_candy(Candy.new("Hershey's Kisses"))
@@ -52,10 +51,11 @@ RSpec.describe Bag do
     expect(type).to eq("Hershey's Kisses")
   end
 
-  xit 'can be asked if it has a particular kind of candy' do
+  it 'can be asked if it has a particular kind of candy' do
     bag = Bag.new
     bag.add_candy(Candy.new("Lindt chocolate"))
-
+# require "pry"
+# binding.pry
     expect(bag.contains?('Lindt chocolate')).to be true
     expect(bag.contains?('Nerds')).to false
   end
